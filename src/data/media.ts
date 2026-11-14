@@ -5,12 +5,20 @@ import udonYakisobaImg from '../assets/images/dish_udon_yakisoba_1794619877405.j
 import interiorImg from '../assets/images/restaurant_interior_clean_1794619892765.jpg';
 import dessertTeaImg from '../assets/images/dish_dessert_tea_1794619878840.jpg';
 
+/** Prefix public/ assets with Vite base (needed for GitHub project Pages). */
+function publicAsset(path: string): string {
+  const base = import.meta.env.BASE_URL || '/';
+  const normalizedBase = base.endsWith('/') ? base : `${base}/`;
+  const normalizedPath = path.replace(/^\//, '');
+  return `${normalizedBase}${normalizedPath}`;
+}
+
 /** Tekmax order-site dish photos (public/images/menu) */
-const MENU = '/images/menu';
+const MENU = publicAsset('images/menu');
 
 export const MEDIA = {
-  logo: '/images/hoshi-logo.png',
-  refHero: '/images/ref-hero.jpg',
+  logo: publicAsset('images/hoshi-logo.png'),
+  refHero: publicAsset('images/ref-hero.jpg'),
   heroRamen: heroRamenImg,
   specialtyRamen: specialtyRamenImg,
   riceTonkatsu: riceTonkatsuImg,

@@ -6,7 +6,7 @@ import { SeoHead } from '../components/SeoHead';
 
 const GALLERY_ITEMS = MENU_ITEMS.filter(
   (item) =>
-    item.image.includes('/images/menu/') &&
+    item.image.includes('images/menu/') &&
     !['Drinks', 'Kids Menu'].includes(item.category)
 );
 
