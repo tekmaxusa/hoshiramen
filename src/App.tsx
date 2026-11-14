@@ -21,7 +21,7 @@ function ScrollToTop() {
 export default function App() {
   return (
     <CartProvider>
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '') || undefined}>
         <ScrollToTop />
         <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-[#161412]">
           <Navbar />
