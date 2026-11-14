@@ -1,0 +1,8 @@
+{
+  "name": "Hoshi Ramen Keller",
+  "description": "Authentic Japanese ramen, special noodles, rice bowls, and handcrafted appetizers in Keller, Texas. Browse our full menu, reserve a table, or order online.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
