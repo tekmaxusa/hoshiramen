@@ -76,9 +76,19 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/order-online" className="hover:text-white transition-colors">
-                  Order Online
+                <Link to="/gallery" className="hover:text-white transition-colors">
+                  Gallery
                 </Link>
+              </li>
+              <li>
+                <a
+                  href={RESTAURANT_INFO.orderingUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                >
+                  Order Online
+                </a>
               </li>
               <li>
                 <Link to="/reservations" className="hover:text-white transition-colors">

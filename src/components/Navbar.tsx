@@ -1,27 +1,24 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { Menu, ShoppingBag, X } from 'lucide-react';
+import { ExternalLink, Menu, ShoppingBag, X } from 'lucide-react';
 import { MEDIA } from '../data/media';
 import { RESTAURANT_INFO } from '../data/restaurant';
-import { useCart } from '../context/CartContext';
 
 const NAV_ITEMS = [
   { label: 'Home', to: '/' },
   { label: 'Menu', to: '/menu' },
   { label: 'About Us', to: '/about' },
-  { label: 'Order Online', to: '/order-online' },
+  { label: 'Gallery', to: '/gallery' },
   { label: 'Reservations', to: '/reservations' },
   { label: 'Contact', to: '/contact' },
 ];
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const { totals } = useCart();
 
   return (
     <header className="sticky top-0 z-40 w-full bg-[#FAF7F2]/95 backdrop-blur-md border-b border-[#E4DDD2]">
       <div className="max-w-[1200px] mx-auto px-3 sm:px-6 h-16 md:h-[72px] flex items-center justify-between gap-2 sm:gap-4 lg:gap-8">
-        {/* Zone 1: Brand Lockup */}
         <Link
           to="/"
           onClick={() => setMobileOpen(false)}
@@ -38,7 +35,6 @@ export function Navbar() {
           </span>
         </Link>
 
-        {/* Zone 2: Primary Navigation Links */}
         <nav
           aria-label="Main navigation"
           className="hidden lg:flex items-center gap-6 text-[14px] font-medium text-[#4A433D]"
@@ -61,26 +57,20 @@ export function Navbar() {
           ))}
         </nav>
 
-        {/* Zone 3: Single Primary Action + Mobile Toggle */}
         <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
-          <Link
-            to="/order-online"
+          <a
+            href={RESTAURANT_INFO.orderingUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setMobileOpen(false)}
-            aria-label={
-              totals.itemCount > 0
-                ? `Order Online, ${totals.itemCount} items in cart`
-                : 'Order Online'
-            }
+            aria-label="Order Online on TekMax"
             className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 min-h-[40px] text-xs sm:text-sm font-medium text-[#FAF7F2] bg-[#B92B27] hover:bg-[#961F1C] transition-colors duration-150 rounded-md whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#161412]"
           >
             <ShoppingBag className="w-4 h-4 shrink-0" aria-hidden="true" />
-            <span className="hidden sm:inline">
-              {totals.itemCount > 0 ? `Order (${totals.itemCount})` : 'Order Online'}
-            </span>
-            <span className="sm:hidden tabular-nums">
-              {totals.itemCount > 0 ? `Order (${totals.itemCount})` : 'Order'}
-            </span>
-          </Link>
+            <span className="hidden sm:inline">Order Online</span>
+            <span className="sm:hidden">Order</span>
+            <ExternalLink className="w-3.5 h-3.5 shrink-0 opacity-90" aria-hidden="true" />
+          </a>
 
           <button
             type="button"
@@ -98,7 +88,6 @@ export function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Navigation Drawer */}
       {mobileOpen && (
         <nav
           aria-label="Mobile navigation"

@@ -1,7 +1,7 @@
-import { Check, Plus } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import type { MenuItem } from '../data/menu';
 import { formatCurrency } from '../utils/cartLogic';
-import { useCart } from '../context/CartContext';
+import { RESTAURANT_INFO } from '../data/restaurant';
 import { DishImage } from './DishImage';
 
 interface MenuCardProps {
@@ -9,9 +9,6 @@ interface MenuCardProps {
 }
 
 export function MenuCard({ item }: MenuCardProps) {
-  const { cart, addToCart } = useCart();
-  const inCart = cart.find((c) => c.id === item.id);
-
   return (
     <article className="group flex flex-col bg-white border border-[#E4DDD2] rounded-lg overflow-hidden transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-md">
       <div className="aspect-[4/3] w-full overflow-hidden bg-[#EFE9DF]">
@@ -52,35 +49,16 @@ export function MenuCard({ item }: MenuCardProps) {
           {item.description}
         </p>
 
-        <button
-          type="button"
-          onClick={() =>
-            addToCart({
-              id: item.id,
-              name: item.name,
-              price: item.price,
-              image: item.image,
-            })
-          }
-          aria-label={`Add ${item.name} to cart`}
-          className={`w-full min-h-[42px] px-4 py-2 rounded-md text-sm font-medium inline-flex items-center justify-center gap-2 transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B92B27] ${
-            inCart
-              ? 'bg-[#24201C] text-[#FAF7F2] hover:bg-[#161412]'
-              : 'bg-[#F2ECE3] text-[#161412] hover:bg-[#B92B27] hover:text-[#FAF7F2]'
-          }`}
+        <a
+          href={RESTAURANT_INFO.orderingUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Order ${item.name} online`}
+          className="w-full min-h-[42px] px-4 py-2 rounded-md text-sm font-medium inline-flex items-center justify-center gap-2 transition-colors duration-150 bg-[#F2ECE3] text-[#161412] hover:bg-[#B92B27] hover:text-[#FAF7F2] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B92B27]"
         >
-          {inCart ? (
-            <>
-              <Check className="w-4 h-4" aria-hidden="true" />
-              <span className="tabular-nums">In Order ({inCart.quantity}) · Add Another</span>
-            </>
-          ) : (
-            <>
-              <Plus className="w-4 h-4" aria-hidden="true" />
-              <span>Add to Cart</span>
-            </>
-          )}
-        </button>
+          <span>Order Online</span>
+          <ExternalLink className="w-3.5 h-3.5" aria-hidden="true" />
+        </a>
       </div>
     </article>
   );

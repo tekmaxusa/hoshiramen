@@ -92,21 +92,21 @@ export function AboutPage() {
           <div className="lg:col-span-7 grid grid-cols-2 gap-4 order-1 lg:order-2">
             <div className="rounded-lg overflow-hidden border border-[#E4DDD2] aspect-[4/3]">
               <DishImage
-                src={MEDIA.heroRamen}
+                src={MEDIA.hoshiRamen}
                 alt="Traditional ramen bowl with braised chashu and egg"
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="rounded-lg overflow-hidden border border-[#E4DDD2] aspect-[4/3]">
               <DishImage
-                src={MEDIA.riceTonkatsu}
-                alt="Crispy panko tonkatsu and pan-fried gyoza dumplings"
+                src={MEDIA.tonkatsu}
+                alt="Crispy panko tonkatsu rice bowl"
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="col-span-2 rounded-lg overflow-hidden border border-[#E4DDD2] aspect-[16/9]">
               <DishImage
-                src={MEDIA.udonYakisoba}
+                src={MEDIA.regularUdon}
                 alt="Thick Japanese udon noodles with crispy shrimp tempura"
                 className="w-full h-full object-cover"
               />

@@ -73,7 +73,7 @@ export const MENU_CATEGORIES: CategoryMeta[] = [
 ];
 
 export const MENU_ITEMS: MenuItem[] = [
-  // APPETIZERS (13)
+  // APPETIZERS
   {
     id: 'app-edamame',
     code: 'A1',
@@ -82,7 +82,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 5,
     description:
       'Lightly salted steamed young soybeans served in the pod. A healthy, protein-rich appetizer that is perfect for snacking and sharing.',
-    image: MEDIA.refEdamame,
+    image: MEDIA.edamame,
     dietaryNote: 'Vegetarian',
   },
   {
@@ -93,7 +93,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 7,
     description:
       'Crispy golden croquettes filled with creamy mashed potato and sweet pumpkin, served with thinly sliced cabbage. Crunchy outside with a soft, flavorful center.',
-    image: MEDIA.refKorokke,
+    image: MEDIA.korokke,
     dietaryNote: 'Vegetarian',
   },
   {
@@ -103,8 +103,8 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'Appetizers',
     price: 8,
     description:
-      'Crispy golden spring rolls filled with a savory mix of vegetables, deep-fried until light, crunchy, and ready for dipping.',
-    image: MEDIA.refSpringRoll,
+      'Crispy golden spring rolls filled with a savory mix of vegetables, deep-fried to perfection—light, crunchy, and perfect for dipping.',
+    image: MEDIA.springRoll,
     dietaryNote: 'Vegetarian',
   },
   {
@@ -114,8 +114,8 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'Appetizers',
     price: 7,
     description:
-      'Crispy pan-fried dumplings filled with seasoned meat or vegetables, served with a savory soy dipping sauce—golden outside and juicy inside.',
-    image: MEDIA.refGyoza,
+      'Crispy pan-fried dumplings filled with seasoned meat or vegetables. Served with a savory soy dipping sauce—golden outside and juicy inside.',
+    image: MEDIA.gyoza,
     featured: true,
   },
   {
@@ -126,7 +126,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 7,
     description:
       'Crispy-on-the-outside, soft-on-the-inside savory octopus balls topped with creamy mayo, sweet takoyaki sauce, and delicate bonito flakes.',
-    image: MEDIA.refTakoyaki,
+    image: MEDIA.takoyaki,
     featured: true,
   },
   {
@@ -137,7 +137,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 10,
     description:
       'Japanese-style marinated crispy fried chicken—juicy on the inside, golden and crunchy on the outside, served with crisp sliced cabbage.',
-    image: MEDIA.refKaraage,
+    image: MEDIA.chickenKaraage,
   },
   {
     id: 'app-squid-karaage',
@@ -147,7 +147,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 10,
     description:
       'Tender pieces of squid lightly seasoned and deep-fried to crispy perfection, served with sliced cabbage for a refreshing crunch.',
-    image: MEDIA.refSquidKaraage,
+    image: MEDIA.squidKaraage,
   },
   {
     id: 'app-chashu-bun',
@@ -157,7 +157,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 7,
     description:
       'Steamed bao buns filled with tender pork chashu, drizzled with spicy mayo and sweet-savory katsu sauce, layered with crisp sliced cabbage.',
-    image: MEDIA.refChashuBun,
+    image: MEDIA.chashuBun,
     featured: true,
   },
   {
@@ -168,7 +168,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 7,
     description:
       'Fluffy steamed bao buns stuffed with juicy fried chicken, topped with spicy mayo, tangy katsu sauce, and crisp sliced cabbage.',
-    image: MEDIA.refChickenBun,
+    image: MEDIA.chickenBun,
   },
   {
     id: 'app-ebi-fry',
@@ -178,7 +178,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 10,
     description:
       'Crispy golden-breaded shrimp fried until light, crunchy, and juicy inside, served with savory soy dipping sauce.',
-    image: MEDIA.refSpringRoll,
+    image: MEDIA.ebiFry,
   },
   {
     id: 'app-korean-pancake',
@@ -188,16 +188,15 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 10,
     description:
       'Crispy-edged, tender savory pancakes pan-fried with fresh vegetables and seafood to golden perfection.',
-    image: MEDIA.refKorokke,
+    image: MEDIA.koreanPancake,
   },
   {
     id: 'app-yakitori',
     name: 'Yakitori (3pcs)',
     category: 'Appetizers',
     price: 10,
-    description:
-      'Three flame-grilled skewers of tender chicken and sweet onion glazed in a savory-sweet tare sauce.',
-    image: MEDIA.refKaraage,
+    description: 'Chicken & onion—three flame-grilled skewers glazed in a savory-sweet tare sauce.',
+    image: MEDIA.chickenKaraage,
   },
   {
     id: 'app-seaweed-salad',
@@ -206,11 +205,11 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 5,
     description:
       'Chilled seasoned wakame seaweed tossed with toasted sesame oil and sesame seeds for a crisp, refreshing starter.',
-    image: MEDIA.refEdamame,
+    image: MEDIA.edamame,
     dietaryNote: 'Vegetarian',
   },
 
-  // RAMEN (6)
+  // RAMEN
   {
     id: 'ramen-hoshi',
     code: 'R1',
@@ -218,8 +217,8 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'Ramen',
     price: 15,
     description:
-      'Our signature bowl—choose your broth and enjoy tender pork chashu, soft-boiled egg, green onion, bean sprouts, black mushroom, and sweet corn.',
-    image: MEDIA.heroRamen,
+      'Build your perfect bowl—choose your broth and enjoy it with tender pork chashu, soft-boiled egg, green onion, bean sprouts, black mushroom, and sweet corn.',
+    image: MEDIA.hoshiRamen,
     featured: true,
   },
   {
@@ -229,8 +228,8 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'Ramen',
     price: 18,
     description:
-      'A bold take on our Hoshi Ramen, topped with tender beef brisket and juicy chicken—rich in smoky, savory flavor for meat lovers.',
-    image: MEDIA.specialtyRamen,
+      'A bold take on our Hoshi Ramen, topped with tender beef brisket and juicy chicken—rich in flavor and perfect for meat lovers.',
+    image: MEDIA.texanRamen,
     featured: true,
   },
   {
@@ -241,7 +240,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 17,
     description:
       'A spicy and tangy spin on our Hoshi Ramen topped with fermented kimchi, crispy onion flakes, and roasted garlic flakes.',
-    image: MEDIA.specialtyRamen,
+    image: MEDIA.kimchiRamen,
     dietaryNote: 'Spicy',
   },
   {
@@ -251,8 +250,8 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'Ramen',
     price: 16,
     description:
-      'Our signature Hoshi Ramen enhanced with fragrant roasted garlic oil and crispy garlic flakes for deep, aromatic flavor in every bite.',
-    image: MEDIA.refHero,
+      'Our signature Hoshi Ramen enhanced with fragrant garlic oil and crispy garlic flakes for deep, savory flavor in every bite.',
+    image: MEDIA.garlicRamen,
   },
   {
     id: 'ramen-vegetable',
@@ -262,7 +261,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 17,
     description:
       'Fragrant vegetable broth cradling crispy tofu, black mushrooms, crunchy bean sprouts, sweet corn, vibrant green onions, and caramelized onions and carrots.',
-    image: MEDIA.heroRamen,
+    image: MEDIA.vegetableRamen,
     dietaryNote: 'Vegetarian',
   },
   {
@@ -273,10 +272,10 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 18,
     description:
       'Savory Hoshi broth layered with tender marinated bulgogi beef, green onion, bean sprouts, black mushroom, corn, garlic oil, and crispy onion flakes.',
-    image: MEDIA.specialtyRamen,
+    image: MEDIA.bulgogiRamen,
   },
 
-  // SPECIAL NOODLES (3)
+  // SPECIAL NOODLES
   {
     id: 'noodle-yakisoba',
     code: 'SN1',
@@ -285,17 +284,17 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 13,
     description:
       'Stir-fried noodles in savory yakisoba sauce with your choice of protein, crisp cabbage, green beans, carrots, and onions, finished with bonito flakes and mayo.',
-    image: MEDIA.udonYakisoba,
+    image: MEDIA.yakisoba,
   },
   {
     id: 'noodle-regular-udon',
-    code: 'SN2',
+    code: 'SN1',
     name: 'Regular Udon',
     category: 'Special Noodles',
     price: 15,
     description:
       'Thick udon noodles in a light dashi broth with 2 crispy shrimp tempura, green onion, seaweed, kamaboko fish cake, tenkasu, and shiitake mushroom.',
-    image: MEDIA.udonYakisoba,
+    image: MEDIA.regularUdon,
     featured: true,
   },
   {
@@ -304,11 +303,11 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'Special Noodles',
     price: 16,
     description:
-      'Thick chewy udon noodles bathed in warm, savory Japanese curry broth with 2 crispy fried shrimp, green onion, kamaboko, and zuke pickles.',
-    image: MEDIA.udonYakisoba,
+      'Thick chewy udon noodles in warm Japanese curry broth with 2 crispy fried shrimp, green onion, kamaboko, and zuke pickles.',
+    image: MEDIA.regularUdon,
   },
 
-  // RICE BOWL (8)
+  // RICE BOWL
   {
     id: 'rice-bulgogi',
     code: 'B1',
@@ -317,7 +316,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 17,
     description:
       'Tender marinated beef over steamed rice accompanied by two crispy gyoza dumplings, sweet corn, green onions, spicy mayo, and savory soy glaze.',
-    image: MEDIA.riceTonkatsu,
+    image: MEDIA.bulgogiBowl,
   },
   {
     id: 'rice-spicy-pork',
@@ -327,7 +326,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 15,
     description:
       'Fiery marinated pork over steaming rice with two golden gyoza dumplings, green onions, sweet corn, spicy mayo, and rich soy glaze.',
-    image: MEDIA.riceTonkatsu,
+    image: MEDIA.spicyPork,
     dietaryNote: 'Spicy',
   },
   {
@@ -338,7 +337,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 15,
     description:
       'Glazed marinated chicken on fluffy rice with two crispy gyoza, finished with fresh green onions, sweet corn, spicy mayo, and soy glaze.',
-    image: MEDIA.riceTonkatsu,
+    image: MEDIA.teriyakiBowl,
   },
   {
     id: 'rice-fried-rice',
@@ -347,8 +346,8 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'Rice Bowl',
     price: 10,
     description:
-      'Flat-iron teppan grilled rice tossed with sweet corn, green peas, cut green beans, lima beans, and carrots, finished with a savory soy glaze.',
-    image: MEDIA.riceTonkatsu,
+      'Teppan-grilled rice tossed with sweet corn, green peas, cut green beans, lima beans, and carrots, finished with a savory soy glaze.',
+    image: MEDIA.friedRice,
   },
   {
     id: 'rice-curry',
@@ -357,8 +356,8 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'Rice Bowl',
     price: 15,
     description:
-      'Rich aromatic Japanese curry sauce paired with your choice of crispy chicken or fried ebi shrimp, served with steamed rice and pickled vegetables.',
-    image: MEDIA.riceTonkatsu,
+      'Rich aromatic Japanese curry sauce paired with your choice of chicken or crispy ebi shrimp, served with steamed rice and pickled vegetables.',
+    image: MEDIA.curryRice,
   },
   {
     id: 'rice-tonkatsu',
@@ -368,7 +367,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 18,
     description:
       'Crispy panko-crusted pork cutlet served with steamed rice and fresh sliced cabbage, drizzled with tangy tonkatsu sauce and bright parsley.',
-    image: MEDIA.riceTonkatsu,
+    image: MEDIA.tonkatsu,
     featured: true,
   },
   {
@@ -379,7 +378,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 19,
     description:
       'Golden panko-crusted pork cutlet filled with melted cheese, served with steamed rice, fresh sliced cabbage, and tangy tonkatsu sauce.',
-    image: MEDIA.riceTonkatsu,
+    image: MEDIA.cheeseTonkatsu,
   },
   {
     id: 'rice-chashu',
@@ -389,10 +388,10 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 15,
     description:
       'Steamed rice topped with tender pork chashu, sweet corn, green onion, spicy mayo, and soy glaze—served with 2 crispy gyoza on the side.',
-    image: MEDIA.riceTonkatsu,
+    image: MEDIA.chashuBun,
   },
 
-  // KIDS MENU (3)
+  // KIDS MENU
   {
     id: 'kids-ramen',
     code: 'KM1',
@@ -401,7 +400,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 8,
     description:
       'Child-sized bowl with choice of Tonkotsu, Shoyu, Miso, or Vegetable broth and tender noodles, topped with one slice of chashu, soft-boiled egg, and sweet corn.',
-    image: MEDIA.heroRamen,
+    image: MEDIA.hoshiRamen,
   },
   {
     id: 'kids-rice-bowl',
@@ -411,7 +410,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 9,
     description:
       'Kid-friendly portion of steamed rice topped with choice of Bulgogi, Teriyaki, or Chashu, served with a soft-boiled egg for added protein.',
-    image: MEDIA.riceTonkatsu,
+    image: MEDIA.bulgogiBowl,
   },
   {
     id: 'kids-fried-rice',
@@ -421,27 +420,27 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 8,
     description:
       'Teppan-grilled rice with colorful corn, sweet peas, green beans, lima beans, and carrots, finished with a mild, kid-friendly soy glaze.',
-    image: MEDIA.riceTonkatsu,
+    image: MEDIA.friedRice,
   },
 
-  // DESSERT (5)
+  // DESSERT
   {
     id: 'dessert-mochi',
     name: 'Mochi Ice Cream (2pcs)',
     category: 'Dessert',
     price: 5,
     description:
-      'Soft, chewy pounded rice mochi wrapped around creamy ice cream—a refreshing, sweet finish to a warm bowl of ramen.',
-    image: MEDIA.dessertTea,
+      'Chewy mochi filled with creamy ice cream—soft, sweet, and refreshing.',
+    image: MEDIA.mochi,
   },
   {
     id: 'dessert-mont-blanc',
-    name: 'Mont Blanc Cake',
+    name: 'Mont Blanc Cake (1pc)',
     category: 'Dessert',
     price: 5,
     description:
-      'A delicate Japanese café cake layered with whipped cream and roasted chestnut purée over light sponge cake.',
-    image: MEDIA.dessertTea,
+      'A delicate dessert made with whipped cream and chestnut purée over sponge cake—light and nutty.',
+    image: MEDIA.montBlanc,
   },
   {
     id: 'dessert-cheesecake',
@@ -449,8 +448,8 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'Dessert',
     price: 5,
     description:
-      'Rich, velvety Japanese-style baked cheesecake with a lightly caramelized golden top.',
-    image: MEDIA.dessertTea,
+      'Rich, creamy cheesecake with a golden-baked finish. Classic, smooth, and indulgent.',
+    image: MEDIA.cheesecake,
   },
   {
     id: 'dessert-bingsu',
@@ -459,7 +458,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 7,
     description:
       'Fluffy snow-fine shaved ice dessert layered with sweet condensed milk and seasonal toppings for a light, cooling treat.',
-    image: MEDIA.dessertTea,
+    image: MEDIA.mochi,
   },
   {
     id: 'dessert-ice-pop',
@@ -468,10 +467,10 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 3,
     description:
       'Chilled fruit ice pop—crisp, sweet, and ideal for younger guests or a quick refreshment.',
-    image: MEDIA.dessertTea,
+    image: MEDIA.mochi,
   },
 
-  // DRINKS (10)
+  // DRINKS
   {
     id: 'drink-bottled-water',
     name: 'Bottled Water',

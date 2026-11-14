@@ -6,7 +6,7 @@ import { Footer } from './components/Footer';
 import { HomePage } from './pages/HomePage';
 import { MenuPage } from './pages/MenuPage';
 import { AboutPage } from './pages/AboutPage';
-import { OrderOnlinePage } from './pages/OrderOnlinePage';
+import { GalleryPage } from './pages/GalleryPage';
 import { ReservationsPage } from './pages/ReservationsPage';
 import { ContactPage } from './pages/ContactPage';
 
@@ -30,7 +30,7 @@ export default function App() {
               <Route path="/" element={<HomePage />} />
               <Route path="/menu" element={<MenuPage />} />
               <Route path="/about" element={<AboutPage />} />
-              <Route path="/order-online" element={<OrderOnlinePage />} />
+              <Route path="/gallery" element={<GalleryPage />} />
               <Route path="/reservations" element={<ReservationsPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="*" element={<HomePage />} />

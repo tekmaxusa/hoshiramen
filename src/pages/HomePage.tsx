@@ -19,21 +19,21 @@ const CATEGORY_HIGHLIGHTS = [
     category: 'Ramen',
     summary:
       'Rich Tonkotsu, Shoyu, Miso, and Vegetable broths topped with braised pork chashu, brisket, kimchi, and soft-boiled egg.',
-    image: MEDIA.specialtyRamen,
+    image: MEDIA.hoshiRamen,
   },
   {
     title: 'Rice Bowls & Crispy Katsu',
     category: 'Rice Bowl',
     summary:
       'Steamed rice layered with marinated bulgogi, spicy pork, teriyaki chicken, or golden panko-crusted tonkatsu.',
-    image: MEDIA.riceTonkatsu,
+    image: MEDIA.tonkatsu,
   },
   {
     title: 'Udon & Stir-Fried Yakisoba',
     category: 'Special Noodles',
     summary:
       'Thick chewy udon noodles in aromatic dashi or Japanese curry alongside savory teppan-tossed yakisoba.',
-    image: MEDIA.udonYakisoba,
+    image: MEDIA.yakisoba,
   },
 ];
 
@@ -82,13 +82,15 @@ export function HomePage() {
               hospitality.
             </p>
             <div className="flex flex-wrap items-center gap-4 pt-2">
-              <Link
-                to="/order-online"
+              <a
+                href={RESTAURANT_INFO.orderingUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 min-h-[46px] rounded-md bg-[#B92B27] hover:bg-[#961F1C] text-[#FAF7F2] text-sm font-semibold transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FAF7F2]"
               >
                 <span>Order Online</span>
                 <ArrowRight className="w-4 h-4" aria-hidden="true" />
-              </Link>
+              </a>
               <Link
                 to="/menu"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 min-h-[46px] rounded-md bg-[#FAF7F2]/10 hover:bg-[#FAF7F2]/20 border border-[#FAF7F2]/35 text-[#FAF7F2] text-sm font-semibold backdrop-blur-sm transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FAF7F2]"
